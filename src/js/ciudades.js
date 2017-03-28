@@ -1,5 +1,5 @@
 function get_regiones(){
-	var regiones= [
+	return [
 		{
 			name: "arica",
 			distance: 2059
@@ -62,32 +62,3 @@ function get_regiones(){
 		}
 	]
 }
-
-var regiones = JSON.parse(regiones);
-var leng = regiones.length; 
-console.log(paises[0].nombre);
-	
-var lista = $("#origen");
-var listaFinal = '';	
-	for (var i=0; i < leng; i++){
-
-		var html ='<option value="Arica, Chile">Arica</option>'; 
-		listaFinal +=html;
-		
-	}
-	
-	lista.html(listaFinal); 
-	var lis=$('li');
-// listaPaises.each(function(){
-// var src = $(this).find('img').attr('src');	
-//})
-	for(var i= 0; i<lis.length; i++)
-	{
-		//lis[i].on('click',onLinkClick);
-		lis[i].addEventListener('click',onLinkClick);
-	}
-	
-}
-
-
-

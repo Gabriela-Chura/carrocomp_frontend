@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="src/bootstrap/bootstrap.min.css">
 	<link rel="stylesheet" href="src/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="src/Boostrap-select/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="src/sweetalert/sweetalert.css">
 	<link rel="stylesheet" href="src/css/style.css">
 	<!--REQUIRED STYLE SHEETS-->
 </head>
@@ -14,7 +15,7 @@
 <div class="container-fluid">
 	<div class="navbar navbar-default navbar-fixed-top">
 		
-    <img src="docs/logo-gris.jpg" width="150px"class="d-inline-block align-top" alt="">
+    <img src="docs/logo-gris.jpg" width="150px"class="d-inline-block align-top" alt="" style="margin-left:10px;">
 	<i class="fa fa-info-circle" aria-hidden="true" id="icon"> <span class="tooltiptext"><img src="docs/logo-peach.jpg" width="80px"class="d-inline-block align-top" alt=""> <br> <br> La nueva forma de moverte en la ciudad. Con <img src="docs/logo-gris.jpg" width="60px"class="d-inline-block align-top" alt=""> puedes compartir tu viaje con amigos y cobrar el costo equitativamente. </span></i>
 
 	</div><!--END NAV SECTION -->
@@ -23,9 +24,8 @@
 		  </div>
 		  <div id="info">
 		  	<h5> ORIGEN</h5>
-		  	<select id="origen" class="selectpicker btn-mini" data-live-search="true" onchange="calcRoute();">
+		  	<select id="origen" class="selectpicker btn-mini" data-live-search="true" >
  <option value="0">Seleccione</option>	
-  <option value="Arica, Chile">Arica</option>	
   <option value="Arica, Chile">Arica</option>
   <option value="Iquique, Chile">Iquique</option>
   <option value="Antofagasta, Chile">Antofagasta</option>
@@ -43,7 +43,7 @@
   <option value="Punta_Arenas, Chile">Punta Arenas</option>
 </select>
 		  <h5> DESTINO</h5>
-		  	<select id="destino" class="selectpicker btn-mini" data-live-search="true" onchange="calcRoute();">
+		  	<select id="destino" class="selectpicker btn-mini" data-live-search="true">
  <option value="0">Seleccione</option>	
   <option value="Arica, Chile">Arica</option>
   <option value="Iquique, Chile">Iquique</option>
@@ -68,7 +68,7 @@
 		  	<h5> VEHÍCULO <br> <small>seleccione</small></h5>
 		  	
 		  
-		   <form>
+		   <form name="formulario">
     <div class="radio">
       <label><input type="radio" name="optradio"> <img src="docs/moto.jpg" alt="" width="20px;">Motocicleta <br> <small>máximo 2 pasajeros</small></label>
     </div>
@@ -83,10 +83,11 @@
     </div>
   </form>
 		  
-		<button type="button" class="btn btn-sm btn-warning btn-block" id="boton_search" >Compartir carro</button>
-		  </div>
-		  
-	  </div>
+		<button type="button" class="btn btn-sm btn-warning btn-block" id="boton_search" onClick='swal({
+  title: "Costo por persona",
+  text: "$3670 CLP",
+  imageUrl: "docs/moto.jpg"
+})';>Compartir carro</button></div></div>
 		  
 </div>
 	<div id="footer">
@@ -98,6 +99,8 @@
 <script src="src/jquery/jquery.min.js"></script>
 <script src="src/bootstrap/bootstrap.min.js"></script>
 <script src="src/Boostrap-select/js/bootstrap-select.min.js"></script>
+<script src="src/sweetalert/sweetalert.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU1xo2WdqDJ_4uFrjZ--6X1K6nVqbHXDg&callback=initMap" async defer></script>
 <script src="src/js/custom.js"></script>
+<script src="src/js/ciudades.js"></script>
 </html>

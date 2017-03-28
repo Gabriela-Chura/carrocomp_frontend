@@ -9,11 +9,12 @@ var minifyCSS = require('gulp-minify-css');
 
 
 gulp.task('script', function(cb){
-	// tarea script
+	gulp.src('src/js/*.js').pipe(concat('todo.js')).pipe(uglify()).pipe(gulp.dest('src/js/'))
 });
 
+
 gulp.task('style', function() {
-	// tarea style
+	
 });
 
 gulp.task('images', function() {
