@@ -5,29 +5,99 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Examen Herramientas Productividad</title>
 	<link rel="stylesheet" href="src/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="src/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="src/Boostrap-select/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="src/css/style.css">
 	<!--REQUIRED STYLE SHEETS-->
 </head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-		</div>
+<div class="container-fluid">
+	<div class="navbar navbar-default navbar-fixed-top">
+		
+    <img src="docs/logo-gris.jpg" width="150px"class="d-inline-block align-top" alt="">
+	<i class="fa fa-info-circle" aria-hidden="true" id="icon"> <span class="tooltiptext"><img src="docs/logo-peach.jpg" width="80px"class="d-inline-block align-top" alt=""> <br> <br> La nueva forma de moverte en la ciudad. Con <img src="docs/logo-gris.jpg" width="60px"class="d-inline-block align-top" alt=""> puedes compartir tu viaje con amigos y cobrar el costo equitativamente. </span></i>
+
 	</div><!--END NAV SECTION -->
-	<div id="home-sec">   
-		<div class="container"  >
-		</div>
-	</div><!--END HOME SECTION-->  
-	<section id="info"  >
-		<div class="container">
-		</div>
-	</section><!--END ABOUT SECTION-->
-	<section id="calculator" >
-		<div class="container">
-		</div>
-	</section><!--END PROJECT SECTION-->
+	  <div class="row">
+	  	<div id="map">
+		  </div>
+		  <div id="info">
+		  	<h5> ORIGEN</h5>
+		  	<select id="origen" class="selectpicker btn-mini" data-live-search="true" onchange="calcRoute();">
+ <option value="0">Seleccione</option>	
+  <option value="Arica, Chile">Arica</option>	
+  <option value="Arica, Chile">Arica</option>
+  <option value="Iquique, Chile">Iquique</option>
+  <option value="Antofagasta, Chile">Antofagasta</option>
+  <option value="Calama, Chile">Calama</option>
+  <option value="La_Serena, Chile">La Serena</option>
+  <option value="Valparaiso, Chile">Valparaiso</option>
+  <option value="Santiago, Chile">Santiago</option>
+  <option value="Rancagua, Chile">Rancagua</option>
+  <option value="Talca Chile">Talca</option>
+  <option value="Concepción, Chile">Concepción</option>
+  <option value="Temuco, Chile">Temuco</option>
+  <option value="Valdivia, Chile">Valdivia</option>
+  <option value="Puerto_Montt, Chile">Puerto Montt</option>
+  <option value="Coyhaique, Chile">Coyhaique</option>
+  <option value="Punta_Arenas, Chile">Punta Arenas</option>
+</select>
+		  <h5> DESTINO</h5>
+		  	<select id="destino" class="selectpicker btn-mini" data-live-search="true" onchange="calcRoute();">
+ <option value="0">Seleccione</option>	
+  <option value="Arica, Chile">Arica</option>
+  <option value="Iquique, Chile">Iquique</option>
+  <option value="Antofagasta, Chile">Antofagasta</option>
+  <option value="Calama, Chile">Calama</option>
+  <option value="La_Serena, Chile">La Serena</option>
+  <option value="Valparaiso, Chile">Valparaiso</option>
+  <option value="Santiago, Chile">Santiago</option>
+  <option value="Rancagua, Chile">Rancagua</option>
+  <option value="Talca Chile">Talca</option>
+  <option value="Concepción, Chile">Concepción</option>
+  <option value="Temuco, Chile">Temuco</option>
+  <option value="Valdivia, Chile">Valdivia</option>
+  <option value="Puerto_Montt, Chile">Puerto Montt</option>
+  <option value="Coyhaique, Chile">Coyhaique</option>
+  <option value="Punta_Arenas, Chile">Punta Arenas</option>
+</select>
+		<button type="button" class="btn btn-sm btn-warning btn-block" id="boton_search" disabled>Buscar</button>
+		  </div>
+		   
+		   <div id="coches" hidden>
+		  	<h5> VEHÍCULO <br> <small>seleccione</small></h5>
+		  	
+		  
+		   <form>
+    <div class="radio">
+      <label><input type="radio" name="optradio"> <img src="docs/moto.jpg" alt="" width="20px;">Motocicleta <br> <small>máximo 2 pasajeros</small></label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio"> <img src="docs/auto.jpg" alt="" width="20px;">Automóvil <br> <small>máximo 5 pasajeros</small></label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio"> <img src="docs/van.jpg" alt="" width="20px;">Minivan <br> <small>máximo 10 pasajeros</small></label>
+    </div>
+     <div class="radio">
+      <label><input type="radio" name="optradio"> <img src="docs/camion.jpg" alt="" width="20px;">Camión <br> <small>máximo 3 pasajeros</small></label>
+    </div>
+  </form>
+		  
+		<button type="button" class="btn btn-sm btn-warning btn-block" id="boton_search" >Compartir carro</button>
+		  </div>
+		  
+	  </div>
+		  
+</div>
 	<div id="footer">
 		2014 www.yourdomain.com | All Right Reserved  
 	</div><!-- END FOOTER SECTION -->
+		  
 </body>
+
 <script src="src/jquery/jquery.min.js"></script>
 <script src="src/bootstrap/bootstrap.min.js"></script>
+<script src="src/Boostrap-select/js/bootstrap-select.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU1xo2WdqDJ_4uFrjZ--6X1K6nVqbHXDg&callback=initMap" async defer></script>
+<script src="src/js/custom.js"></script>
 </html>

@@ -1,0 +1,84 @@
+
+
+
+@import url("https://fonts.googleapis.com/css?family=Oswald|Roboto" rel="stylesheet");
+
+$white-hunt: white;
+$melon-hunt: #fec95c;
+$black-hunt: #2e2d2d; 
+$font-Os: 'Oswald', sans-serif;
+$font-Rb: 'Roboto', sans-serif;
+/*####################NAV#############*/
+*{
+	outline: 1px solid red;
+	margin: 0px;
+	padding: 0px;
+}
+
+.navbar-default{
+	 background-color: $white-hunt; 
+	padding-top: 10px;
+}
+
+#map {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+#icon {
+	padding-top: 5px;
+ float: right;
+margin-right: 70px;
+ font-size: 20px;
+ background: #fff;
+ color:$melon-hunt ; 
+
+	&:hover .tooltiptext{
+		visibility: visible;
+	}
+
+.tooltiptext {
+    visibility: hidden;
+    width: 200px;
+	height:100px;
+    background-color: $white-hunt;
+	text-align: center;
+    color:$black-hunt;
+    margin-top: 30px;
+    padding: 8px 8px;
+	font-size: 12px;
+	font-family: $font-Rb;
+	right: 65px; 
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+}
+
+#info{
+		width: 250px;
+		height: 150px;
+		background-color: $white-hunt;
+		padding: 0 15px;
+		position: absolute;
+		left: 20px; 
+		top: 60px;
+	}
+
+#boton_search{
+	margin-top: 18px;
+}
+
+#coches{
+		width: 250px;
+		height: 240px;
+		background-color: $white-hunt;
+		padding: 0 15px;
+		position: absolute;
+		left: 20px; 
+		top: 250px;
+	}
+
+
+

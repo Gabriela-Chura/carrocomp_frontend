@@ -1,28 +1,28 @@
 function get_regiones(){
-	return [
+	var regiones= [
 		{
 			name: "arica",
-			distance: 0
+			distance: 2059
 		},
 		{
 			name: "iquique",
-			distance: 0
+			distance: 1789
 		},
 		{
 			name: "antofagasta",
-			distance: 0
+			distance: 1368
 		},
 		{
 			name: "copiapo",
-			distance: 0
+			distance: 1567
 		},
 		{
 			name: "la_serena",
-			distance: 0
+			distance: 470
 		},
 		{
 			name: "valparaiso",
-			distance: 0
+			distance: 116
 		},
 		{
 			name: "rancagua",
@@ -30,35 +30,64 @@ function get_regiones(){
 		},
 		{
 			name: "talca",
-			distance: 0
+			distance: 84
 		},
 		{
 			name: "concepcion",
-			distance: 0
+			distance: 257
 		},
 		{
 			name: "temuco",
-			distance: 0
+			distance: 500
 		},
 		{
 			name: "valdivia",
-			distance: 0
+			distance: 690
 		},
 		{
 			name: "puerto_montt",
-			distance: 0
+			distance: 848
 		},
 		{
 			name: "coyhaique",
-			distance: 0
+			distance: 1032
 		},
 		{
 			name: "punta_arenas",
-			distance: 0
+			distance: 1888
 		},
 		{
 			name: "santiago",
-			distance: 0
+			distance: 3004
 		}
 	]
 }
+
+var regiones = JSON.parse(regiones);
+var leng = regiones.length; 
+console.log(paises[0].nombre);
+	
+var lista = $("#origen");
+var listaFinal = '';	
+	for (var i=0; i < leng; i++){
+
+		var html ='<option value="Arica, Chile">Arica</option>'; 
+		listaFinal +=html;
+		
+	}
+	
+	lista.html(listaFinal); 
+	var lis=$('li');
+// listaPaises.each(function(){
+// var src = $(this).find('img').attr('src');	
+//})
+	for(var i= 0; i<lis.length; i++)
+	{
+		//lis[i].on('click',onLinkClick);
+		lis[i].addEventListener('click',onLinkClick);
+	}
+	
+}
+
+
+
