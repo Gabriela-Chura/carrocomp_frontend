@@ -47,7 +47,7 @@
   left: 20px;
   top: 60px; }
 
-#boton_search {
+#boton_search, #boton_option {
   margin-top: 12px; }
 
 #coches {
@@ -62,5 +62,11 @@
     width: 30px;
     height: 15px;
     margin: 0px 0px 3px 3px; }
+
+#formulario img {
+  margin-right: 10px; }
+
+#formulario small {
+  margin-left: 28px; }
 
 /*# sourceMappingURL=style.css.map */
