@@ -58,7 +58,7 @@ margin-right: 70px;
 
 #info{
 		width: 250px;
-		height: 150px;
+		height: 120px;
 		background-color: $white-hunt;
 		padding: 0 15px;
 		position: absolute;
@@ -67,17 +67,23 @@ margin-right: 70px;
 	}
 
 #boton_search{
-	margin-top: 18px;
+	margin-top: 12px;
 }
 
 #coches{
 		width: 250px;
-		height: 240px;
+		height: 260px;
 		background-color: $white-hunt;
 		padding: 0 15px;
 		position: absolute;
 		left: 20px; 
-		top: 250px;
+		top: 220px;
+	
+	#cuadrado{
+		width: 30px;
+		height: 15px;
+		margin: 0px 0px 3px 3px;
+	}
 	}
 
 

@@ -24,7 +24,7 @@ var directionsDisplay= new google.maps.DirectionsRenderer;
 		var boton = $('#boton_search');
 		var coches = $('#coches');
 		
-		if ( origen.val() != 0 & destino.val() !=0 ){
+		if ( origen.val() != 0 & destino.val() != 0){
 			boton.removeAttr('disabled');
 			boton.click(btnSearch);
 			
@@ -36,16 +36,17 @@ var directionsDisplay= new google.maps.DirectionsRenderer;
 		}
 		
 	};
-	
+
 	document.getElementById('origen').addEventListener('change', onChangeHandler);
 	document.getElementById('destino').addEventListener('change',onChangeHandler);
 };
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay){
-	
+		var origen = document.getElementById('origen').value+',Chile'; 
+	   var destino = document.getElementById('destino').value+',Chile'; 
 	directionsService.route({
-		origin: document.getElementById('origen').value,
-		destination: document.getElementById('destino').value,
+		origin: origen,
+		destination: destino,
 		travelMode: google.maps.TravelMode.DRIVING
 	}, function(response, status){
 		if (status === google.maps.DirectionsStatus.OK){
@@ -56,8 +57,6 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay){
 	});
 	
 }
-
-
 
 
 	
